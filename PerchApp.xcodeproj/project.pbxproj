@@ -15,6 +15,11 @@
 		11832BCA2081A15200DD8D44 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11832BC92081A15200DD8D44 /* main.m */; };
 		11832BD42081A15200DD8D44 /* PerchAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 11832BD32081A15200DD8D44 /* PerchAppTests.m */; };
 		11832BDF2081A15200DD8D44 /* PerchAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 11832BDE2081A15200DD8D44 /* PerchAppUITests.m */; };
+		11832BEE2081A4F000DD8D44 /* TruckObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 11832BED2081A4F000DD8D44 /* TruckObject.m */; };
+		11832BF22081A5C800DD8D44 /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 11832BF12081A5C800DD8D44 /* APIManager.m */; };
+		11832BF62081A8B800DD8D44 /* ServerReqeustManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 11832BF52081A8B800DD8D44 /* ServerReqeustManager.m */; };
+		11832BF92081AA0400DD8D44 /* ConstantHeader.h in Sources */ = {isa = PBXBuildFile; fileRef = 11832BF82081A99200DD8D44 /* ConstantHeader.h */; };
+		11832BFC2081AB3300DD8D44 /* RequestParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 11832BFB2081AB3300DD8D44 /* RequestParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,15 @@
 		11832BDA2081A15200DD8D44 /* PerchAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PerchAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		11832BDE2081A15200DD8D44 /* PerchAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PerchAppUITests.m; sourceTree = "<group>"; };
 		11832BE02081A15200DD8D44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11832BEC2081A4F000DD8D44 /* TruckObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TruckObject.h; sourceTree = "<group>"; };
+		11832BED2081A4F000DD8D44 /* TruckObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TruckObject.m; sourceTree = "<group>"; };
+		11832BF02081A5C800DD8D44 /* APIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
+		11832BF12081A5C800DD8D44 /* APIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
+		11832BF42081A8B800DD8D44 /* ServerReqeustManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServerReqeustManager.h; sourceTree = "<group>"; };
+		11832BF52081A8B800DD8D44 /* ServerReqeustManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServerReqeustManager.m; sourceTree = "<group>"; };
+		11832BF82081A99200DD8D44 /* ConstantHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConstantHeader.h; sourceTree = "<group>"; };
+		11832BFA2081AB3300DD8D44 /* RequestParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestParser.h; sourceTree = "<group>"; };
+		11832BFB2081AB3300DD8D44 /* RequestParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RequestParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,9 +116,12 @@
 			isa = PBXGroup;
 			children = (
 				11832BBA2081A15200DD8D44 /* AppDelegate.h */,
+				11832BF82081A99200DD8D44 /* ConstantHeader.h */,
 				11832BBB2081A15200DD8D44 /* AppDelegate.m */,
 				11832BBD2081A15200DD8D44 /* ViewController.h */,
 				11832BBE2081A15200DD8D44 /* ViewController.m */,
+				11832BF32081A5E900DD8D44 /* Networking */,
+				11832BEF2081A4F600DD8D44 /* Model */,
 				11832BC02081A15200DD8D44 /* Main.storyboard */,
 				11832BC32081A15200DD8D44 /* Assets.xcassets */,
 				11832BC52081A15200DD8D44 /* LaunchScreen.storyboard */,
@@ -130,6 +147,28 @@
 				11832BE02081A15200DD8D44 /* Info.plist */,
 			);
 			path = PerchAppUITests;
+			sourceTree = "<group>";
+		};
+		11832BEF2081A4F600DD8D44 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				11832BEC2081A4F000DD8D44 /* TruckObject.h */,
+				11832BED2081A4F000DD8D44 /* TruckObject.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		11832BF32081A5E900DD8D44 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				11832BF02081A5C800DD8D44 /* APIManager.h */,
+				11832BF12081A5C800DD8D44 /* APIManager.m */,
+				11832BF42081A8B800DD8D44 /* ServerReqeustManager.h */,
+				11832BF52081A8B800DD8D44 /* ServerReqeustManager.m */,
+				11832BFA2081AB3300DD8D44 /* RequestParser.h */,
+				11832BFB2081AB3300DD8D44 /* RequestParser.m */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,9 +304,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11832BFC2081AB3300DD8D44 /* RequestParser.m in Sources */,
+				11832BEE2081A4F000DD8D44 /* TruckObject.m in Sources */,
 				11832BBF2081A15200DD8D44 /* ViewController.m in Sources */,
+				11832BF92081AA0400DD8D44 /* ConstantHeader.h in Sources */,
+				11832BF62081A8B800DD8D44 /* ServerReqeustManager.m in Sources */,
 				11832BCA2081A15200DD8D44 /* main.m in Sources */,
 				11832BBC2081A15200DD8D44 /* AppDelegate.m in Sources */,
+				11832BF22081A5C800DD8D44 /* APIManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
