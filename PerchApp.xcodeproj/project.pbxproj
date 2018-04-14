@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		11832BBC2081A15200DD8D44 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11832BBB2081A15200DD8D44 /* AppDelegate.m */; };
+		11832BBF2081A15200DD8D44 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11832BBE2081A15200DD8D44 /* ViewController.m */; };
+		11832BC22081A15200DD8D44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11832BC02081A15200DD8D44 /* Main.storyboard */; };
+		11832BC42081A15200DD8D44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11832BC32081A15200DD8D44 /* Assets.xcassets */; };
+		11832BC72081A15200DD8D44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11832BC52081A15200DD8D44 /* LaunchScreen.storyboard */; };
+		11832BCA2081A15200DD8D44 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11832BC92081A15200DD8D44 /* main.m */; };
+		11832BD42081A15200DD8D44 /* PerchAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 11832BD32081A15200DD8D44 /* PerchAppTests.m */; };
+		11832BDF2081A15200DD8D44 /* PerchAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 11832BDE2081A15200DD8D44 /* PerchAppUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		11832BD02081A15200DD8D44 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 11832BAF2081A15200DD8D44 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 11832BB62081A15200DD8D44;
+			remoteInfo = PerchApp;
+		};
+		11832BDB2081A15200DD8D44 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 11832BAF2081A15200DD8D44 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 11832BB62081A15200DD8D44;
+			remoteInfo = PerchApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		11832BB72081A15200DD8D44 /* PerchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PerchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		11832BBA2081A15200DD8D44 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		11832BBB2081A15200DD8D44 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		11832BBD2081A15200DD8D44 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		11832BBE2081A15200DD8D44 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		11832BC12081A15200DD8D44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		11832BC32081A15200DD8D44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		11832BC62081A15200DD8D44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		11832BC82081A15200DD8D44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11832BC92081A15200DD8D44 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		11832BCF2081A15200DD8D44 /* PerchAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PerchAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		11832BD32081A15200DD8D44 /* PerchAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PerchAppTests.m; sourceTree = "<group>"; };
+		11832BD52081A15200DD8D44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11832BDA2081A15200DD8D44 /* PerchAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PerchAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		11832BDE2081A15200DD8D44 /* PerchAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PerchAppUITests.m; sourceTree = "<group>"; };
+		11832BE02081A15200DD8D44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		11832BB42081A15200DD8D44 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11832BCC2081A15200DD8D44 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11832BD72081A15200DD8D44 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		11832BAE2081A15200DD8D44 = {
+			isa = PBXGroup;
+			children = (
+				11832BB92081A15200DD8D44 /* PerchApp */,
+				11832BD22081A15200DD8D44 /* PerchAppTests */,
+				11832BDD2081A15200DD8D44 /* PerchAppUITests */,
+				11832BB82081A15200DD8D44 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		11832BB82081A15200DD8D44 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				11832BB72081A15200DD8D44 /* PerchApp.app */,
+				11832BCF2081A15200DD8D44 /* PerchAppTests.xctest */,
+				11832BDA2081A15200DD8D44 /* PerchAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		11832BB92081A15200DD8D44 /* PerchApp */ = {
+			isa = PBXGroup;
+			children = (
+				11832BBA2081A15200DD8D44 /* AppDelegate.h */,
+				11832BBB2081A15200DD8D44 /* AppDelegate.m */,
+				11832BBD2081A15200DD8D44 /* ViewController.h */,
+				11832BBE2081A15200DD8D44 /* ViewController.m */,
+				11832BC02081A15200DD8D44 /* Main.storyboard */,
+				11832BC32081A15200DD8D44 /* Assets.xcassets */,
+				11832BC52081A15200DD8D44 /* LaunchScreen.storyboard */,
+				11832BC82081A15200DD8D44 /* Info.plist */,
+				11832BC92081A15200DD8D44 /* main.m */,
+			);
+			path = PerchApp;
+			sourceTree = "<group>";
+		};
+		11832BD22081A15200DD8D44 /* PerchAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				11832BD32081A15200DD8D44 /* PerchAppTests.m */,
+				11832BD52081A15200DD8D44 /* Info.plist */,
+			);
+			path = PerchAppTests;
+			sourceTree = "<group>";
+		};
+		11832BDD2081A15200DD8D44 /* PerchAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				11832BDE2081A15200DD8D44 /* PerchAppUITests.m */,
+				11832BE02081A15200DD8D44 /* Info.plist */,
+			);
+			path = PerchAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		11832BB62081A15200DD8D44 /* PerchApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11832BE32081A15200DD8D44 /* Build configuration list for PBXNativeTarget "PerchApp" */;
+			buildPhases = (
+				11832BB32081A15200DD8D44 /* Sources */,
+				11832BB42081A15200DD8D44 /* Frameworks */,
+				11832BB52081A15200DD8D44 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PerchApp;
+			productName = PerchApp;
+			productReference = 11832BB72081A15200DD8D44 /* PerchApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		11832BCE2081A15200DD8D44 /* PerchAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11832BE62081A15200DD8D44 /* Build configuration list for PBXNativeTarget "PerchAppTests" */;
+			buildPhases = (
+				11832BCB2081A15200DD8D44 /* Sources */,
+				11832BCC2081A15200DD8D44 /* Frameworks */,
+				11832BCD2081A15200DD8D44 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				11832BD12081A15200DD8D44 /* PBXTargetDependency */,
+			);
+			name = PerchAppTests;
+			productName = PerchAppTests;
+			productReference = 11832BCF2081A15200DD8D44 /* PerchAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		11832BD92081A15200DD8D44 /* PerchAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11832BE92081A15200DD8D44 /* Build configuration list for PBXNativeTarget "PerchAppUITests" */;
+			buildPhases = (
+				11832BD62081A15200DD8D44 /* Sources */,
+				11832BD72081A15200DD8D44 /* Frameworks */,
+				11832BD82081A15200DD8D44 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				11832BDC2081A15200DD8D44 /* PBXTargetDependency */,
+			);
+			name = PerchAppUITests;
+			productName = PerchAppUITests;
+			productReference = 11832BDA2081A15200DD8D44 /* PerchAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		11832BAF2081A15200DD8D44 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Perch;
+				TargetAttributes = {
+					11832BB62081A15200DD8D44 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					11832BCE2081A15200DD8D44 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 11832BB62081A15200DD8D44;
+					};
+					11832BD92081A15200DD8D44 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 11832BB62081A15200DD8D44;
+					};
+				};
+			};
+			buildConfigurationList = 11832BB22081A15200DD8D44 /* Build configuration list for PBXProject "PerchApp" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 11832BAE2081A15200DD8D44;
+			productRefGroup = 11832BB82081A15200DD8D44 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				11832BB62081A15200DD8D44 /* PerchApp */,
+				11832BCE2081A15200DD8D44 /* PerchAppTests */,
+				11832BD92081A15200DD8D44 /* PerchAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		11832BB52081A15200DD8D44 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11832BC72081A15200DD8D44 /* LaunchScreen.storyboard in Resources */,
+				11832BC42081A15200DD8D44 /* Assets.xcassets in Resources */,
+				11832BC22081A15200DD8D44 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11832BCD2081A15200DD8D44 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11832BD82081A15200DD8D44 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		11832BB32081A15200DD8D44 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11832BBF2081A15200DD8D44 /* ViewController.m in Sources */,
+				11832BCA2081A15200DD8D44 /* main.m in Sources */,
+				11832BBC2081A15200DD8D44 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11832BCB2081A15200DD8D44 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11832BD42081A15200DD8D44 /* PerchAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11832BD62081A15200DD8D44 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11832BDF2081A15200DD8D44 /* PerchAppUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		11832BD12081A15200DD8D44 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 11832BB62081A15200DD8D44 /* PerchApp */;
+			targetProxy = 11832BD02081A15200DD8D44 /* PBXContainerItemProxy */;
+		};
+		11832BDC2081A15200DD8D44 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 11832BB62081A15200DD8D44 /* PerchApp */;
+			targetProxy = 11832BDB2081A15200DD8D44 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		11832BC02081A15200DD8D44 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				11832BC12081A15200DD8D44 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		11832BC52081A15200DD8D44 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				11832BC62081A15200DD8D44 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		11832BE12081A15200DD8D44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		11832BE22081A15200DD8D44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		11832BE42081A15200DD8D44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5HBA5A75HU;
+				INFOPLIST_FILE = PerchApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.perch.PerchApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		11832BE52081A15200DD8D44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5HBA5A75HU;
+				INFOPLIST_FILE = PerchApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.perch.PerchApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		11832BE72081A15200DD8D44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5HBA5A75HU;
+				INFOPLIST_FILE = PerchAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.perch.PerchAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PerchApp.app/PerchApp";
+			};
+			name = Debug;
+		};
+		11832BE82081A15200DD8D44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5HBA5A75HU;
+				INFOPLIST_FILE = PerchAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.perch.PerchAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PerchApp.app/PerchApp";
+			};
+			name = Release;
+		};
+		11832BEA2081A15200DD8D44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5HBA5A75HU;
+				INFOPLIST_FILE = PerchAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.perch.PerchAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PerchApp;
+			};
+			name = Debug;
+		};
+		11832BEB2081A15200DD8D44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5HBA5A75HU;
+				INFOPLIST_FILE = PerchAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.perch.PerchAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PerchApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		11832BB22081A15200DD8D44 /* Build configuration list for PBXProject "PerchApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11832BE12081A15200DD8D44 /* Debug */,
+				11832BE22081A15200DD8D44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		11832BE32081A15200DD8D44 /* Build configuration list for PBXNativeTarget "PerchApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11832BE42081A15200DD8D44 /* Debug */,
+				11832BE52081A15200DD8D44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		11832BE62081A15200DD8D44 /* Build configuration list for PBXNativeTarget "PerchAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11832BE72081A15200DD8D44 /* Debug */,
+				11832BE82081A15200DD8D44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		11832BE92081A15200DD8D44 /* Build configuration list for PBXNativeTarget "PerchAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11832BEA2081A15200DD8D44 /* Debug */,
+				11832BEB2081A15200DD8D44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 11832BAF2081A15200DD8D44 /* Project object */;
+}
