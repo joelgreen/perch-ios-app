@@ -40,11 +40,18 @@
 - (void)updateMapWithTruckObejcts
 {
     for (TruckObject *truck in self.truckObjects) {
-        [self addUserPinForTruck:truck];
+        [self addPinForTruck:truck];
+    }
+    if ([self.truckObjects count]) {
+        // Zoom in near a truck
+        MKMapCamera *camera = [[MKMapCamera alloc] init];
+        camera.centerCoordinate = [[self.truckObjects firstObject] currentLocation];
+        camera.altitude = 15000;
+        [self.mapView setCamera:camera animated:YES];
     }
 }
 
-- (void)addUserPinForTruck:(TruckObject *)truck
+- (void)addPinForTruck:(TruckObject *)truck
 {
     MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
     annotation.coordinate = [truck currentLocation];

@@ -9,9 +9,12 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 
+
 @interface TruckObject : NSObject
 
 @property (strong, nonatomic) NSString *title;
+
++ (TruckObject *)objectFromJson:(NSDictionary *)json;
 
 - (CLLocationCoordinate2D)currentLocation;
 

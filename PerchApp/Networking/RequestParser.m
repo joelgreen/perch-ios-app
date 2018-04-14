@@ -15,8 +15,13 @@
     NSMutableArray *truckObjects = [[NSMutableArray alloc] init];
     
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:nil];
-    NSLog(@"%@", dict);
     
+    NSArray *trucks = [dict objectForKey:@"trucks"];
+    
+    for (NSDictionary *truckJson in trucks) {
+        TruckObject *truck = [TruckObject objectFromJson:truckJson];
+        [truckObjects addObject:truck];
+    }
     return truckObjects;
 }
 
