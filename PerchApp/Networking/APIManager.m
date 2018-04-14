@@ -23,7 +23,7 @@
 
 #pragma mark - Lazy Initalization
 
-- (ServerReqeustManager *)serverRequestHandler
+- (ServerReqeustManager *)requestManager
 {
     if (!_requestManager) {
         _requestManager = [[ServerReqeustManager alloc] init];

@@ -26,6 +26,7 @@
 
 - (void)getTruckSchedule:(apiRequestComplete)completionBlock
 {
+    NSLog(@"requesting truck schedule");
     NSString *urlString = @"http://flask-env.qfkjpmpp82.us-west-2.elasticbeanstalk.com/random_truck_schedule";
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlString]
                                                            cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData

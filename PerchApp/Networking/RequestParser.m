@@ -14,7 +14,14 @@
 {
     NSMutableArray *truckObjects = [[NSMutableArray alloc] init];
     
+    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:nil];
+    NSLog(@"%@", dict);
+    
     return truckObjects;
 }
+
+
+
+
 
 @end

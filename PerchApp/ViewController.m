@@ -8,13 +8,16 @@
 
 #import "ViewController.h"
 #import <MapKit/MapKit.h>
+#import "APIManager.h"
 
 #import "TruckObject.h"
+#import "RequestParser.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @property (strong, nonatomic) NSMutableArray *truckPins;
+@property (strong, nonatomic) NSArray *truckObjects;
 
 @end
 
@@ -28,7 +31,17 @@
 
 - (void)loadTruckObjects
 {
-    
+    [[[APIManager sharedInstance] requestManager] getTruckSchedule:^(NSData *data) {
+        self.truckObjects = [RequestParser getTruckObjectsFromResponseData:data];
+        [self updateMapWithTruckObejcts];
+    }];
+}
+
+- (void)updateMapWithTruckObejcts
+{
+    for (TruckObject *truck in self.truckObjects) {
+        [self addUserPinForTruck:truck];
+    }
 }
 
 - (void)addUserPinForTruck:(TruckObject *)truck
