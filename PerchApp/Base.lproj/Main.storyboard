@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="CircularStd-Book.otf">
+            <string>CircularStd-Book</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -85,29 +90,33 @@
                                     <action selector="dismissAnyModel:" destination="OeC-Is-XPD" eventType="touchUpInside" id="cj6-hU-8Ow"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MUT-5O-QsX">
-                                <rect key="frame" x="22" y="597" width="331" height="50"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="wga-5S-dYc"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZdV-dL-es4">
-                                <rect key="frame" x="0.0" y="58" width="375" height="531"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="0.0" y="58" width="375" height="521"/>
+                                <color key="backgroundColor" red="0.23529411764705882" green="0.31372549019607843" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bt-Jq-bLz">
+                                <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                                <color key="backgroundColor" red="0.396078431372549" green="0.78823529411764703" blue="0.47843137254901957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="1Qo-XS-7aX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="21"/>
+                                <state key="normal" title="Review &amp; Checkout">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.23529411764705882" green="0.31372549019607843" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ZdV-dL-es4" firstAttribute="leading" secondItem="ZdN-Mr-zVq" secondAttribute="leading" id="12K-Mw-uRI"/>
                             <constraint firstItem="q5u-KV-Xjz" firstAttribute="leading" secondItem="ZdN-Mr-zVq" secondAttribute="leading" constant="22" id="1xg-Mg-1C0"/>
-                            <constraint firstItem="ZdN-Mr-zVq" firstAttribute="trailing" secondItem="ZdV-dL-es4" secondAttribute="trailing" id="4F6-5p-FnW"/>
-                            <constraint firstItem="MUT-5O-QsX" firstAttribute="leading" secondItem="ZdN-Mr-zVq" secondAttribute="leading" constant="22" id="Ehd-OA-j8b"/>
+                            <constraint firstItem="ZdV-dL-es4" firstAttribute="leading" secondItem="ZdN-Mr-zVq" secondAttribute="leading" id="BbS-sU-uNk"/>
+                            <constraint firstItem="ZdV-dL-es4" firstAttribute="trailing" secondItem="ZdN-Mr-zVq" secondAttribute="trailing" id="CcD-D9-iS9"/>
+                            <constraint firstItem="6bt-Jq-bLz" firstAttribute="top" secondItem="ZdV-dL-es4" secondAttribute="bottom" constant="8" id="Snp-hX-3Pj"/>
+                            <constraint firstItem="6bt-Jq-bLz" firstAttribute="bottom" secondItem="ZdN-Mr-zVq" secondAttribute="bottom" id="d2p-Z0-hds"/>
+                            <constraint firstItem="6bt-Jq-bLz" firstAttribute="leading" secondItem="ZdN-Mr-zVq" secondAttribute="leading" id="g2t-E8-uBu"/>
                             <constraint firstItem="q5u-KV-Xjz" firstAttribute="top" secondItem="ZdN-Mr-zVq" secondAttribute="top" id="iX7-YH-ugr"/>
-                            <constraint firstItem="ZdN-Mr-zVq" firstAttribute="bottom" secondItem="MUT-5O-QsX" secondAttribute="bottom" constant="20" id="pye-Ji-cEs"/>
-                            <constraint firstItem="ZdV-dL-es4" firstAttribute="top" secondItem="q5u-KV-Xjz" secondAttribute="bottom" constant="8" id="umS-oh-qQm"/>
-                            <constraint firstItem="ZdN-Mr-zVq" firstAttribute="trailing" secondItem="MUT-5O-QsX" secondAttribute="trailing" constant="22" id="xhK-gd-h0u"/>
-                            <constraint firstItem="MUT-5O-QsX" firstAttribute="top" secondItem="ZdV-dL-es4" secondAttribute="bottom" constant="8" id="yCe-Qi-Idk"/>
+                            <constraint firstItem="ZdV-dL-es4" firstAttribute="top" secondItem="q5u-KV-Xjz" secondAttribute="bottom" constant="8" id="kQL-Ru-QUa"/>
+                            <constraint firstItem="6bt-Jq-bLz" firstAttribute="trailing" secondItem="ZdN-Mr-zVq" secondAttribute="trailing" id="qN7-9d-r98"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZdN-Mr-zVq"/>
                     </view>

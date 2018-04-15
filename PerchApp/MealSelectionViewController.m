@@ -12,7 +12,7 @@
 @interface MealSelectionViewController () <FSPagerViewDelegate, FSPagerViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UIView *pagedViewHolder;
-
+@property (weak, nonatomic) FSPagerView *pagerView;
 
 @end
 
@@ -20,26 +20,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    FSPagerView *pagerView = [[FSPagerView alloc] initWithFrame:self.pagedViewHolder.frame];
-    pagerView.dataSource = self;
-    pagerView.delegate = self;
-    [pagerView registerClass:[FSPagerViewCell class] forCellWithReuseIdentifier:@"cell"];
-    [self.self.pagedViewHolder addSubview:pagerView];
-    
-    pagerView.transformer = [[FSPagerViewTransformer alloc] initWithType:FSPagerViewTransformerTypeLinear];
-
-    
-    // Create a page control
-//    FSPageControl *pageControl = [[FSPageControl alloc] initWithFrame:frame2];
-//    [self.view addSubview:pageControl];
-
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     
+    FSPagerView *pagerView = [[FSPagerView alloc] initWithFrame:self.pagedViewHolder.frame];
+    pagerView.dataSource = self;
+    pagerView.delegate = self;
+    
+    [pagerView registerClass:[FSPagerViewCell class] forCellWithReuseIdentifier:@"cell"];
+    [self.self.pagedViewHolder addSubview:pagerView];
+    
+    pagerView.transformer = [[FSPagerViewTransformer alloc] initWithType:FSPagerViewTransformerTypeLinear];
+    
+    CGAffineTransform transform = CGAffineTransformMakeScale(0.8, 0.8);
+    self.pagerView = pagerView;
+    self.pagerView.itemSize = CGSizeApplyAffineTransform(self.pagerView.frame.size, transform);
 }
 
 - (IBAction)dismissAnyModel:(id)sender
