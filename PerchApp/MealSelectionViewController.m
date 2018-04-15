@@ -21,6 +21,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *cartCount;
 @property (strong, nonatomic) NSMutableArray *recipeViews;
 
+@property (nonatomic) BOOL viewDidLoadAlready;
+
 @end
 
 @implementation MealSelectionViewController
@@ -46,41 +48,43 @@
 {
     [super viewDidAppear:animated];
     
-    FSPagerView *pagerView = [[FSPagerView alloc] initWithFrame:CGRectMake(0, 0, self.pagedViewHolder.frame.size.width, self.pagedViewHolder.frame.size.height)];
-    pagerView.dataSource = self;
-    pagerView.delegate = self;
-    
-    [pagerView registerClass:[FSPagerViewCell class] forCellWithReuseIdentifier:@"cell"];
-    [self.pagedViewHolder addSubview:pagerView];
-    self.pagerView = pagerView;
-    
-    pagerView.transformer = [[FSPagerViewTransformer alloc] initWithType:FSPagerViewTransformerTypeLinear];
-    
-    CGAffineTransform transform = CGAffineTransformMakeScale(1.2 * 0.6, 1.2);
-    self.pagerView.itemSize = CGSizeApplyAffineTransform(self.pagerView.frame.size, transform);
-    
-    NSMutableArray *recipes = [[NSMutableArray alloc] init];
-    
-    RecipeObject *rec = [[RecipeObject alloc] init];
-    rec.frontImageName = @"tikka.png";
-    rec.backImageName = @"tikka-back.png";
-    [recipes addObject:rec];
-    
-    RecipeObject *rec2 = [[RecipeObject alloc] init];
-    rec2.frontImageName = @"halibut.png";
-    rec2.backImageName = @"halibut-back.png";
-    [recipes addObject:rec2];
-
-    RecipeObject *rec3 = [[RecipeObject alloc] init];
-    rec3.frontImageName = @"pizza.png";
-    rec3.backImageName = @"pizza-back.png";
-    [recipes addObject:rec3];
-    self.recipes = recipes;
-    
-    self.cartCount.layer.cornerRadius = 42/2;
-    self.cartCount.layer.borderWidth = 2.0f;
-    self.cartCount.layer.borderColor = [UIColor whiteColor].CGColor;
-    
+    if (!self.viewDidLoadAlready) {
+        FSPagerView *pagerView = [[FSPagerView alloc] initWithFrame:CGRectMake(0, 0, self.pagedViewHolder.frame.size.width, self.pagedViewHolder.frame.size.height)];
+        pagerView.dataSource = self;
+        pagerView.delegate = self;
+        
+        [pagerView registerClass:[FSPagerViewCell class] forCellWithReuseIdentifier:@"cell"];
+        [self.pagedViewHolder addSubview:pagerView];
+        self.pagerView = pagerView;
+        
+        pagerView.transformer = [[FSPagerViewTransformer alloc] initWithType:FSPagerViewTransformerTypeLinear];
+        
+        CGAffineTransform transform = CGAffineTransformMakeScale(1.2 * 0.6, 1.2);
+        self.pagerView.itemSize = CGSizeApplyAffineTransform(self.pagerView.frame.size, transform);
+        
+        NSMutableArray *recipes = [[NSMutableArray alloc] init];
+        
+        RecipeObject *rec = [[RecipeObject alloc] init];
+        rec.frontImageName = @"tikka.png";
+        rec.backImageName = @"tikka-back.png";
+        [recipes addObject:rec];
+        
+        RecipeObject *rec2 = [[RecipeObject alloc] init];
+        rec2.frontImageName = @"halibut.png";
+        rec2.backImageName = @"halibut-back.png";
+        [recipes addObject:rec2];
+        
+        RecipeObject *rec3 = [[RecipeObject alloc] init];
+        rec3.frontImageName = @"pizza.png";
+        rec3.backImageName = @"pizza-back.png";
+        [recipes addObject:rec3];
+        self.recipes = recipes;
+        
+        self.cartCount.layer.cornerRadius = 42/2;
+        self.cartCount.layer.borderWidth = 2.0f;
+        self.cartCount.layer.borderColor = [UIColor whiteColor].CGColor;
+    }
+    self.viewDidLoadAlready = YES;
 }
 
 

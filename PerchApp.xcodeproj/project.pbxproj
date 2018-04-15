@@ -56,6 +56,8 @@
 		11832BF62081A8B800DD8D44 /* ServerReqeustManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 11832BF52081A8B800DD8D44 /* ServerReqeustManager.m */; };
 		11832BF92081AA0400DD8D44 /* ConstantHeader.h in Sources */ = {isa = PBXBuildFile; fileRef = 11832BF82081A99200DD8D44 /* ConstantHeader.h */; };
 		11832BFC2081AB3300DD8D44 /* RequestParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 11832BFB2081AB3300DD8D44 /* RequestParser.m */; };
+		11E230B520836B5000A2595F /* CheckoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11E230B420836B5000A2595F /* CheckoutViewController.m */; };
+		11E230B720836B7900A2595F /* qr.png in Resources */ = {isa = PBXBuildFile; fileRef = 11E230B620836B7900A2595F /* qr.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +146,9 @@
 		11832BF82081A99200DD8D44 /* ConstantHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConstantHeader.h; sourceTree = "<group>"; };
 		11832BFA2081AB3300DD8D44 /* RequestParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestParser.h; sourceTree = "<group>"; };
 		11832BFB2081AB3300DD8D44 /* RequestParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RequestParser.m; sourceTree = "<group>"; };
+		11E230B320836B5000A2595F /* CheckoutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckoutViewController.h; sourceTree = "<group>"; };
+		11E230B420836B5000A2595F /* CheckoutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckoutViewController.m; sourceTree = "<group>"; };
+		11E230B620836B7900A2595F /* qr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = qr.png; path = ../../../../../Downloads/qr.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +194,7 @@
 		116AFC2920831A4200B144C1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				11E230B620836B7900A2595F /* qr.png */,
 				116AFC1720830E5E00B144C1 /* top-bar-main.png */,
 				116AFC1520830A7F00B144C1 /* top-bar-space.png */,
 				116AFC3720833CBA00B144C1 /* halibut.png */,
@@ -261,6 +267,8 @@
 				11832BBE2081A15200DD8D44 /* ViewController.m */,
 				116AFBA22082E37E00B144C1 /* MealSelectionViewController.h */,
 				116AFBA32082E37E00B144C1 /* MealSelectionViewController.m */,
+				11E230B320836B5000A2595F /* CheckoutViewController.h */,
+				11E230B420836B5000A2595F /* CheckoutViewController.m */,
 				116AFC442083464D00B144C1 /* View */,
 				116AFBAC2082E90200B144C1 /* PagedScrollView */,
 				11832BF32081A5E900DD8D44 /* Networking */,
@@ -439,6 +447,7 @@
 				116AFBFA2082F4FC00B144C1 /* test-card.png in Resources */,
 				116AFC012082F9C900B144C1 /* CircularStd-Black.ttf in Resources */,
 				116AFC3920833CBA00B144C1 /* tikka.png in Resources */,
+				11E230B720836B7900A2595F /* qr.png in Resources */,
 				116AFC0A208304FC00B144C1 /* top-bar.png in Resources */,
 				11832BC22081A15200DD8D44 /* Main.storyboard in Resources */,
 				116AFC2420831A3C00B144C1 /* 2.jpg in Resources */,
@@ -474,6 +483,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11E230B520836B5000A2595F /* CheckoutViewController.m in Sources */,
 				116AFBF32082F2E800B144C1 /* FSPageControl.swift in Sources */,
 				116AFBF52082F2E800B144C1 /* FSPageViewLayout.swift in Sources */,
 				11832BFC2081AB3300DD8D44 /* RequestParser.m in Sources */,
