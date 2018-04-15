@@ -26,10 +26,10 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6xl-bL-Pfu">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </mapView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top-bar-main.png" translatesAutoresizingMaskIntoConstraints="NO" id="igM-6O-7RJ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top-bar-main-long.png" translatesAutoresizingMaskIntoConstraints="NO" id="igM-6O-7RJ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="160" id="hfQ-84-0l7"/>
+                                    <constraint firstAttribute="height" constant="180" id="hfQ-84-0l7"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pbv-Z0-YHh">
@@ -133,7 +133,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="top-bar-main.png" width="1125" height="585"/>
+        <image name="top-bar-main-long.png" width="1125" height="707"/>
         <image name="top-bar-space.png" width="746" height="218"/>
     </resources>
 </document>

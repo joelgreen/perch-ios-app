@@ -14,6 +14,7 @@
 #import "TruckObject.h"
 #import "RequestParser.h"
 #import "TruckCardView.h"
+#import "ConstantHeader.h"
 
 @interface ViewController () <MKMapViewDelegate, CLLocationManagerDelegate, FSPagerViewDelegate, FSPagerViewDataSource>
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
@@ -127,21 +128,19 @@ BOOL viewDidLoadAlready = NO;
 - (FSPagerViewCell *)pagerView:(FSPagerView *)pagerView cellForItemAtIndex:(NSInteger)index
 {
     FSPagerViewCell *cell = [pagerView dequeueReusableCellWithReuseIdentifier:@"cell" atIndex:index];
-    
-//    TruckCardView *card = [[TruckCardView alloc] initWithFrame:cell.bounds];
     TruckCardView *card = [[[NSBundle mainBundle] loadNibNamed:@"TruckCardView" owner:self options:nil] objectAtIndex:0];
-
-    NSLog(@"%@", [NSString stringWithFormat:@"%d.jpg", (int)index + 1]);
     [card.imageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%d.jpg", (int)index + 1]]];
     
-    card.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+//    card.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     
     [cell.contentView addSubview:card];
     card.frame = cell.contentView.bounds;
     
-    cell.layer.cornerRadius = 8;
-    cell.clipsToBounds = YES;
-
+    card.bgView.layer.cornerRadius = 8;
+    card.bgView.clipsToBounds = YES;
+//    card.bgView.layer.borderColor = UIColorFromARGB(0x449B9B9B).CGColor;
+//    card.bgView.layer.borderWidth = 1.0f;
+    cell.contentView.layer.shadowOpacity = 0.60;
     
     return cell;
 }

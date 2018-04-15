@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *addressLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeLeftLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLable;
+@property (weak, nonatomic) IBOutlet UIView *bgView;
 
 @end
