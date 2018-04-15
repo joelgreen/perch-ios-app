@@ -19,7 +19,11 @@
 + (TruckObject *)objectFromJson:(NSDictionary *)json
 {
     TruckObject *truck = [[TruckObject alloc] init];
+    
     truck.title = [json objectForKey:@"title"];
+    truck.address = [json objectForKey:@"address"];
+    truck.remaining = [json objectForKey:@"remaining"];
+    
     NSArray *stops = [json objectForKey:@"stops"];
     NSDictionary *firstStop = [stops firstObject];
     truck.currentLoc = CLLocationCoordinate2DMake([[firstStop objectForKey:@"lat"] floatValue], [[firstStop objectForKey:@"lon"] floatValue]);

@@ -13,6 +13,8 @@
 @interface TruckObject : NSObject
 
 @property (strong, nonatomic) NSString *title;
+@property (strong, nonatomic) NSString *address;
+@property (strong, nonatomic) NSString *remaining;
 
 + (TruckObject *)objectFromJson:(NSDictionary *)json;
 

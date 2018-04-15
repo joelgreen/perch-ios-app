@@ -49,18 +49,16 @@
     
 }
 
-BOOL isFlipped = NO;
-
 - (void)flipOver
 {
-    if (!isFlipped) {
+    if (!self.isFlipped) {
         self.imageView.image = [UIImage imageNamed:self.recipeObject.backImageName];
 //        self.addBasketButton.hidden = YES;
     } else {
         self.imageView.image = [UIImage imageNamed:self.recipeObject.frontImageName];
 //        self.addBasketButton.hidden = NO;
     }
-    isFlipped = !isFlipped;
+    self.isFlipped = !self.isFlipped;
 }
 
 - (IBAction)addBasketClicked:(id)sender {
@@ -68,6 +66,10 @@ BOOL isFlipped = NO;
     
 
     UIViewAnimationOptions options = UIViewAnimationOptionAllowUserInteraction;
+    
+    [[NSNotificationCenter defaultCenter]
+     postNotificationName:@"AddedToCart"
+     object:self];
     
     [UIView animateWithDuration:0.75 delay:0 options:options animations:^{
         [self.addBasketButton setBackgroundColor:[UIColor clearColor]];

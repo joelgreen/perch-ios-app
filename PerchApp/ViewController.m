@@ -89,7 +89,7 @@ BOOL viewDidLoadAlready = NO;
         // Zoom in near a truck
         MKMapCamera *camera = [[MKMapCamera alloc] init];
         camera.centerCoordinate = [[self.truckObjects firstObject] currentLocation];
-        camera.altitude = 25000;
+        camera.altitude = 20000;
         [self.mapView setCamera:camera animated:NO];
     }
 }
@@ -129,9 +129,12 @@ BOOL viewDidLoadAlready = NO;
 {
     FSPagerViewCell *cell = [pagerView dequeueReusableCellWithReuseIdentifier:@"cell" atIndex:index];
     TruckCardView *card = [[[NSBundle mainBundle] loadNibNamed:@"TruckCardView" owner:self options:nil] objectAtIndex:0];
+    
     [card.imageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%d.jpg", (int)index + 1]]];
     
-//    card.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    TruckObject *tobj = [self.truckObjects objectAtIndex:index];
+    card.addressLabel.text = tobj.address;
+    card.timeLeftLabel.text = tobj.remaining;
     
     [cell.contentView addSubview:card];
     card.frame = cell.contentView.bounds;
@@ -158,7 +161,7 @@ BOOL viewDidLoadAlready = NO;
 {
     MKMapCamera *camera = [[MKMapCamera alloc] init];
     camera.centerCoordinate = [[self.truckObjects objectAtIndex:pagerView.currentIndex] currentLocation];
-    camera.altitude = 25000;
+    camera.altitude = 20000;
     [self.mapView setCamera:camera animated:YES];
 }
 
@@ -176,7 +179,7 @@ BOOL viewDidLoadAlready = NO;
     
     pin.image = [pin.image imageRotatedByDegrees:degrees];
     
-    pin.canShowCallout = YES;
+    pin.canShowCallout = NO;
     pin.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
 
     return pin;

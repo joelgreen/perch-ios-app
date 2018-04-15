@@ -12,6 +12,8 @@
 
 @interface RecipeCardView : UIView
 
+@property (nonatomic) BOOL isFlipped;
+
 @property (strong, nonatomic) RecipeObject *recipeObject;
 
 - (void)addRecipeObject:(RecipeObject *)recipeObject;

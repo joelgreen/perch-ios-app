@@ -18,6 +18,7 @@
 @property (strong, nonatomic) NSArray *recipes;
 @property (weak, nonatomic) IBOutlet UIImageView *topBar;
 
+@property (weak, nonatomic) IBOutlet UILabel *cartCount;
 @property (strong, nonatomic) NSMutableArray *recipeViews;
 
 @end
@@ -28,6 +29,17 @@
     [super viewDidLoad];
     self.topBar.layer.cornerRadius = 8;
     self.topBar.clipsToBounds = YES;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(addedToCart:)
+                                                 name:@"AddedToCart"
+                                               object:nil];
+}
+
+- (void)addedToCart:(NSNotification *) notification
+{
+    self.cartCount.hidden = NO;
+    self.cartCount.text = [NSString stringWithFormat:@"%d", (int)[self.cartCount.text integerValue] + 1];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -68,6 +80,11 @@
     rec3.backImageName = @"pizza-back.png";
     [recipes addObject:rec3];
     self.recipes = recipes;
+    
+    self.cartCount.layer.cornerRadius = 42/2;
+    self.cartCount.layer.borderWidth = 2.0f;
+    self.cartCount.layer.borderColor = [UIColor whiteColor].CGColor;
+    
 }
 
 
@@ -131,6 +148,11 @@
 //    if (self.pageControl.currentPage != pagerView.currentIndex) {
 //        self.pageControl.currentPage = pagerView.currentIndex;
 //    }
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 
