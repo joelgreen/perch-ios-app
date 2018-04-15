@@ -44,10 +44,10 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pbv-Z0-YHh">
-                                <rect key="frame" x="16" y="403" width="343" height="180"/>
+                                <rect key="frame" x="16" y="343" width="343" height="240"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="180" id="Ks5-Vr-SLE"/>
+                                    <constraint firstAttribute="height" constant="240" id="Ks5-Vr-SLE"/>
                                 </constraints>
                             </view>
                         </subviews>

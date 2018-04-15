@@ -33,6 +33,7 @@
 		116AFC2720831A3C00B144C1 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 116AFC2220831A3B00B144C1 /* 1.jpg */; };
 		116AFC2820831A3C00B144C1 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 116AFC2320831A3C00B144C1 /* 3.jpg */; };
 		116AFC2B20831BE000B144C1 /* TruckCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 116AFC2A20831BE000B144C1 /* TruckCardView.xib */; };
+		116AFC2E20831E8A00B144C1 /* TruckCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 116AFC2D20831E8A00B144C1 /* TruckCardView.m */; };
 		11832BBC2081A15200DD8D44 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11832BBB2081A15200DD8D44 /* AppDelegate.m */; };
 		11832BBF2081A15200DD8D44 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11832BBE2081A15200DD8D44 /* ViewController.m */; };
 		11832BC22081A15200DD8D44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11832BC02081A15200DD8D44 /* Main.storyboard */; };
@@ -95,6 +96,8 @@
 		116AFC2220831A3B00B144C1 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		116AFC2320831A3C00B144C1 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
 		116AFC2A20831BE000B144C1 /* TruckCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TruckCardView.xib; sourceTree = "<group>"; };
+		116AFC2C20831E8A00B144C1 /* TruckCardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TruckCardView.h; sourceTree = "<group>"; };
+		116AFC2D20831E8A00B144C1 /* TruckCardView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TruckCardView.m; sourceTree = "<group>"; };
 		11832BB72081A15200DD8D44 /* PerchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PerchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11832BBA2081A15200DD8D44 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		11832BBB2081A15200DD8D44 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -217,6 +220,8 @@
 				116AFBA32082E37E00B144C1 /* MealSelectionViewController.m */,
 				116AFC1C208314A200B144C1 /* UIImage+UIImage_Extensions.h */,
 				116AFC1D208314A200B144C1 /* UIImage+UIImage_Extensions.m */,
+				116AFC2C20831E8A00B144C1 /* TruckCardView.h */,
+				116AFC2D20831E8A00B144C1 /* TruckCardView.m */,
 				116AFC2A20831BE000B144C1 /* TruckCardView.xib */,
 				116AFBAC2082E90200B144C1 /* PagedScrollView */,
 				11832BF32081A5E900DD8D44 /* Networking */,
@@ -430,6 +435,7 @@
 				11832BEE2081A4F000DD8D44 /* TruckObject.m in Sources */,
 				11832BBF2081A15200DD8D44 /* ViewController.m in Sources */,
 				116AFBF72082F2E800B144C1 /* FSPagerViewLayoutAttributes.swift in Sources */,
+				116AFC2E20831E8A00B144C1 /* TruckCardView.m in Sources */,
 				11832BF92081AA0400DD8D44 /* ConstantHeader.h in Sources */,
 				116AFBA42082E37E00B144C1 /* MealSelectionViewController.m in Sources */,
 				116AFBF82082F2E800B144C1 /* FSPageViewTransformer.swift in Sources */,

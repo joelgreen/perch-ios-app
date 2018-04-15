@@ -13,6 +13,7 @@
 #import "UIImage+UIImage_Extensions.h"
 #import "TruckObject.h"
 #import "RequestParser.h"
+#import "TruckCardView.h"
 
 @interface ViewController () <MKMapViewDelegate, CLLocationManagerDelegate, FSPagerViewDelegate, FSPagerViewDataSource>
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
@@ -33,6 +34,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[NSBundle mainBundle] loadNibNamed:@"TruckCardView" owner:self options:nil];
     [self loadTruckObjects];
     self.mapView.delegate = self;
     self.mapView.showsUserLocation = YES;
@@ -52,7 +54,7 @@
     
     pagerView.transformer = [[FSPagerViewTransformer alloc] initWithType:FSPagerViewTransformerTypeLinear];
     
-    CGAffineTransform transform = CGAffineTransformMakeScale(1.2 * 0.535, 1.2);
+    CGAffineTransform transform = CGAffineTransformMakeScale(0.65, .85);
     self.pagerView.itemSize = CGSizeApplyAffineTransform(self.pagerView.frame.size, transform);
 
 }
@@ -68,8 +70,8 @@
 {
     [[[APIManager sharedInstance] requestManager] getTruckSchedule:^(NSData *data) {
         self.truckObjects = [RequestParser getTruckObjectsFromResponseData:data];
-        [self updateMapWithTruckObejcts];
         dispatch_async(dispatch_get_main_queue(), ^{
+            [self updateMapWithTruckObejcts];
             [self.pagerView reloadData];
         });
     }];
@@ -84,8 +86,8 @@
         // Zoom in near a truck
         MKMapCamera *camera = [[MKMapCamera alloc] init];
         camera.centerCoordinate = [[self.truckObjects firstObject] currentLocation];
-        camera.altitude = 15000;
-        [self.mapView setCamera:camera animated:YES];
+        camera.altitude = 25000;
+        [self.mapView setCamera:camera animated:NO];
     }
 }
 
@@ -124,9 +126,17 @@
 {
     FSPagerViewCell *cell = [pagerView dequeueReusableCellWithReuseIdentifier:@"cell" atIndex:index];
     
-    cell.backgroundColor = [UIColor whiteColor];
-    cell.imageView.contentMode = UIViewContentModeScaleAspectFit;
-    cell.imageView.clipsToBounds = YES;
+    TruckCardView *card = [[TruckCardView alloc] initWithFrame:cell.bounds];
+    card.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%d.png", (int)index]];
+    card.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    
+    [cell.contentView addSubview:card];
+    card.frame = cell.contentView.bounds;
+    
+    cell.layer.cornerRadius = 8;
+    cell.clipsToBounds = YES;
+
+    
     return cell;
 }
 
@@ -143,7 +153,7 @@
 {
     MKMapCamera *camera = [[MKMapCamera alloc] init];
     camera.centerCoordinate = [[self.truckObjects objectAtIndex:pagerView.currentIndex] currentLocation];
-    camera.altitude = 15000;
+    camera.altitude = 25000;
     [self.mapView setCamera:camera animated:YES];
 }
 
@@ -155,7 +165,6 @@
     }
     MKAnnotationView *pin = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"truck"];
 
-    
     pin.image = [UIImage imageNamed:@"truck-icon"];
     
     double degrees = ((double)arc4random() / ARC4RANDOM_MAX) * (360 - 0) + 0;
