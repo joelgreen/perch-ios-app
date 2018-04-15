@@ -26,17 +26,6 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6xl-bL-Pfu">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhv-52-gt3">
-                                <rect key="frame" x="16" y="607" width="343" height="40"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="SpJ-6E-eZf"/>
-                                </constraints>
-                                <state key="normal" title="See Meals"/>
-                                <connections>
-                                    <segue destination="OeC-Is-XPD" kind="presentation" id="YyD-fm-VMA"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top-bar-main.png" translatesAutoresizingMaskIntoConstraints="NO" id="igM-6O-7RJ">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
                                 <constraints>
@@ -44,7 +33,7 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pbv-Z0-YHh">
-                                <rect key="frame" x="16" y="343" width="343" height="240"/>
+                                <rect key="frame" x="16" y="381" width="343" height="240"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="Ks5-Vr-SLE"/>
@@ -61,10 +50,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pbv-Z0-YHh" secondAttribute="trailing" constant="16" id="M4J-mg-bSB"/>
                             <constraint firstItem="6xl-bL-Pfu" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="OMh-6p-lT3"/>
                             <constraint firstItem="6xl-bL-Pfu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="RZY-1C-rJC"/>
-                            <constraint firstItem="bhv-52-gt3" firstAttribute="top" secondItem="pbv-Z0-YHh" secondAttribute="bottom" constant="24" id="pZJ-r0-XZc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bhv-52-gt3" secondAttribute="bottom" constant="20" id="pbT-Gs-qut"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bhv-52-gt3" secondAttribute="trailing" constant="16" id="rbq-S7-Mgn"/>
-                            <constraint firstItem="bhv-52-gt3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="vYK-RB-QbB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pbv-Z0-YHh" secondAttribute="bottom" constant="46" id="lvC-I8-2Ys"/>
                             <constraint firstItem="6xl-bL-Pfu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ykX-aX-5sD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -72,11 +58,12 @@
                     <connections>
                         <outlet property="mapView" destination="6xl-bL-Pfu" id="i1I-as-K2p"/>
                         <outlet property="truckPagesContainer" destination="pbv-Z0-YHh" id="qJe-To-0Zu"/>
+                        <segue destination="OeC-Is-XPD" kind="presentation" identifier="go-to-truck" id="0C2-Np-uDT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1754.4000000000001" y="-278.41079460269867"/>
+            <point key="canvasLocation" x="-1764" y="-278"/>
         </scene>
         <!--Meal Selection View Controller-->
         <scene sceneID="E9d-SM-ED1">

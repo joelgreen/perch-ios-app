@@ -32,6 +32,8 @@
 
 #define ARC4RANDOM_MAX 0x100000000
 
+BOOL viewDidLoadAlready = NO;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [[NSBundle mainBundle] loadNibNamed:@"TruckCardView" owner:self options:nil];
@@ -42,27 +44,27 @@
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
     [self.locationManager requestWhenInUseAuthorization];
-
-    
-    FSPagerView *pagerView = [[FSPagerView alloc] initWithFrame:CGRectMake(0, 0, self.truckPagesContainer.frame.size.width, self.truckPagesContainer.frame.size.height)];
-    pagerView.dataSource = self;
-    pagerView.delegate = self;
-    
-    [pagerView registerClass:[FSPagerViewCell class] forCellWithReuseIdentifier:@"cell"];
-    [self.truckPagesContainer addSubview:pagerView];
-    self.pagerView = pagerView;
-    
-    pagerView.transformer = [[FSPagerViewTransformer alloc] initWithType:FSPagerViewTransformerTypeLinear];
-    
-    CGAffineTransform transform = CGAffineTransformMakeScale(0.65, .85);
-    self.pagerView.itemSize = CGSizeApplyAffineTransform(self.pagerView.frame.size, transform);
-
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     
+    if (!viewDidLoadAlready) {
+        FSPagerView *pagerView = [[FSPagerView alloc] initWithFrame:CGRectMake(0, 0, self.truckPagesContainer.frame.size.width, self.truckPagesContainer.frame.size.height)];
+        pagerView.dataSource = self;
+        pagerView.delegate = self;
+        
+        [pagerView registerClass:[FSPagerViewCell class] forCellWithReuseIdentifier:@"cell"];
+        [self.truckPagesContainer addSubview:pagerView];
+        self.pagerView = pagerView;
+        
+        pagerView.transformer = [[FSPagerViewTransformer alloc] initWithType:FSPagerViewTransformerTypeLinear];
+        
+        CGAffineTransform transform = CGAffineTransformMakeScale(0.65, .85);
+        self.pagerView.itemSize = CGSizeApplyAffineTransform(self.pagerView.frame.size, transform);
+    }
+    viewDidLoadAlready = YES;
 }
 
 
@@ -126,8 +128,12 @@
 {
     FSPagerViewCell *cell = [pagerView dequeueReusableCellWithReuseIdentifier:@"cell" atIndex:index];
     
-    TruckCardView *card = [[TruckCardView alloc] initWithFrame:cell.bounds];
-    card.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%d.png", (int)index]];
+//    TruckCardView *card = [[TruckCardView alloc] initWithFrame:cell.bounds];
+    TruckCardView *card = [[[NSBundle mainBundle] loadNibNamed:@"TruckCardView" owner:self options:nil] objectAtIndex:0];
+
+    NSLog(@"%@", [NSString stringWithFormat:@"%d.jpg", (int)index + 1]);
+    [card.imageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%d.jpg", (int)index + 1]]];
+    
     card.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     
     [cell.contentView addSubview:card];
@@ -144,9 +150,9 @@
 
 - (void)pagerView:(FSPagerView *)pagerView didSelectItemAtIndex:(NSInteger)index
 {
-    [pagerView deselectItemAtIndex:index animated:YES];
-    [pagerView scrollToItemAtIndex:index animated:YES];
-    //    self.pageControl.currentPage = index;
+    [self performSegueWithIdentifier:@"go-to-truck" sender:self];
+//    [pagerView deselectItemAtIndex:index animated:YES];
+//    [pagerView scrollToItemAtIndex:index animated:YES];
 }
 
 - (void)pagerViewDidScroll:(FSPagerView *)pagerView
