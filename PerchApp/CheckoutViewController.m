@@ -7,6 +7,7 @@
 //
 
 #import "CheckoutViewController.h"
+#import "JGProgressHUD.h"
 
 @interface CheckoutViewController ()
 
@@ -41,6 +42,19 @@
     [self.view addSubview:qrView];
 }
 
+- (void)displayProgress
+{
+    JGProgressHUD *HUD = [JGProgressHUD progressHUDWithStyle:JGProgressHUDStyleDark];
+    HUD.textLabel.text = @"Processing";
+    [HUD showInView:self.view];
+    [HUD dismissAfterDelay:3.0];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self displayQRCode];
+    });
+
+}
+
 - (IBAction)acceptButtonPressed:(id)sender {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Confirm Payment of $26.97"
                                                                    message:@"This will be charged to your card ending in 8765."
@@ -48,7 +62,7 @@
     
     UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
                                                           handler:^(UIAlertAction * action) {
-                                                              [self displayQRCode];
+                                                              [self displayProgress];
                                                           }];
     
     [alert addAction:defaultAction];
