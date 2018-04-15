@@ -88,6 +88,7 @@
     FSPagerViewCell *cell = [pagerView dequeueReusableCellWithReuseIdentifier:@"cell" atIndex:index];
     
     if (self.recipeViews.count <= index) {
+        
         RecipeCardView *card = [[[NSBundle mainBundle] loadNibNamed:@"RecipeCardView" owner:self options:nil] objectAtIndex:0];
         
         [card addRecipeObject:[self.recipes objectAtIndex:index]];
@@ -96,7 +97,7 @@
         card.frame = cell.contentView.bounds;
         
         [self.recipeViews setObject:card atIndexedSubscript:index];
-
+        
     }
     
     return cell;

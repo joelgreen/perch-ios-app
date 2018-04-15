@@ -7,6 +7,7 @@
 //
 
 #import "RecipeCardView.h"
+#import "ConstantHeader.h"
 
 @implementation RecipeCardView
 
@@ -35,9 +36,9 @@
 }
 
 - (void) initHelper {
-    self.addBasketButton.imageView.contentMode = UIViewContentModeScaleAspectFit;
-    self.addBasketButton.imageView.clipsToBounds = YES;
+
 }
+
 
 - (void)addRecipeObject:(RecipeObject *)recipeObject
 {
@@ -45,6 +46,7 @@
     self.imageView.image = [UIImage imageNamed:recipeObject.frontImageName];
     self.imageView.contentMode = UIViewContentModeScaleAspectFit;
     self.imageView.clipsToBounds = YES;
+    
 }
 
 BOOL isFlipped = NO;
@@ -62,6 +64,21 @@ BOOL isFlipped = NO;
 }
 
 - (IBAction)addBasketClicked:(id)sender {
+    NSLog(@"add basket clicked");
+    
+
+    UIViewAnimationOptions options = UIViewAnimationOptionAllowUserInteraction;
+    
+    [UIView animateWithDuration:0.75 delay:0 options:options animations:^{
+        [self.addBasketButton setBackgroundColor:[UIColor clearColor]];
+    } completion:^(BOOL finished) {
+        //
+    }];
+
+}
+
+- (IBAction)addBasketTouchDown:(id)sender {
+    [self.addBasketButton setBackgroundColor:UIColorFromARGB(0x8865C97A)];
 }
 
 /*

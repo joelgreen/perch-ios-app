@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "RecipeObject.h"
+#import "AddToBasketButton.h"
 
 @interface RecipeCardView : UIView
 
@@ -17,7 +18,7 @@
 
 - (void)flipOver;
 
-@property (weak, nonatomic) IBOutlet UIButton *addBasketButton;
+@property (weak, nonatomic) IBOutlet AddToBasketButton *addBasketButton;
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 

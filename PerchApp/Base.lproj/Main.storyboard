@@ -33,7 +33,7 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pbv-Z0-YHh">
-                                <rect key="frame" x="16" y="381" width="343" height="240"/>
+                                <rect key="frame" x="16" y="391" width="343" height="240"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="Ks5-Vr-SLE"/>
@@ -50,7 +50,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pbv-Z0-YHh" secondAttribute="trailing" constant="16" id="M4J-mg-bSB"/>
                             <constraint firstItem="6xl-bL-Pfu" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="OMh-6p-lT3"/>
                             <constraint firstItem="6xl-bL-Pfu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="RZY-1C-rJC"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pbv-Z0-YHh" secondAttribute="bottom" constant="46" id="lvC-I8-2Ys"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pbv-Z0-YHh" secondAttribute="bottom" constant="36" id="lvC-I8-2Ys"/>
                             <constraint firstItem="6xl-bL-Pfu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ykX-aX-5sD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
