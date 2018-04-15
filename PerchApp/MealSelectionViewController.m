@@ -13,6 +13,8 @@
 
 @property (weak, nonatomic) IBOutlet UIView *pagedViewHolder;
 @property (weak, nonatomic) FSPagerView *pagerView;
+@property (strong, nonatomic) NSArray *recipes;
+@property (weak, nonatomic) IBOutlet UIImageView *topBar;
 
 @end
 
@@ -20,25 +22,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.topBar.layer.cornerRadius = 8;
+    self.topBar.clipsToBounds = YES;
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     
-    FSPagerView *pagerView = [[FSPagerView alloc] initWithFrame:self.pagedViewHolder.frame];
+    FSPagerView *pagerView = [[FSPagerView alloc] initWithFrame:CGRectMake(0, 0, self.pagedViewHolder.frame.size.width, self.pagedViewHolder.frame.size.height)];
     pagerView.dataSource = self;
     pagerView.delegate = self;
     
     [pagerView registerClass:[FSPagerViewCell class] forCellWithReuseIdentifier:@"cell"];
-    [self.self.pagedViewHolder addSubview:pagerView];
+    [self.pagedViewHolder addSubview:pagerView];
+    self.pagerView = pagerView;
     
     pagerView.transformer = [[FSPagerViewTransformer alloc] initWithType:FSPagerViewTransformerTypeLinear];
     
-    CGAffineTransform transform = CGAffineTransformMakeScale(0.8, 0.8);
-    self.pagerView = pagerView;
+    CGAffineTransform transform = CGAffineTransformMakeScale(1.2 * 0.535, 1.2);
     self.pagerView.itemSize = CGSizeApplyAffineTransform(self.pagerView.frame.size, transform);
+    
+//    float widthRatio = 834 / 1557;
+//    NSLog(@"%f", pagerView.frame.size.height);
+//    self.pagerView.itemSize = CGSizeMake((int)(pagerView.frame.size.height * widthRatio), pagerView.frame.size.height);
+    
+    self.recipes = @[@"chicken.png", @"halibut.png", @"pizza.png"];
 }
+
 
 - (IBAction)dismissAnyModel:(id)sender
 {
@@ -49,16 +60,15 @@
 
 - (NSInteger)numberOfItemsInPagerView:(FSPagerView *)pagerView
 {
-    return 3;
+    return self.recipes.count;
 }
 
 - (FSPagerViewCell *)pagerView:(FSPagerView *)pagerView cellForItemAtIndex:(NSInteger)index
 {
     FSPagerViewCell *cell = [pagerView dequeueReusableCellWithReuseIdentifier:@"cell" atIndex:index];
-    cell.imageView.image = [UIImage imageNamed:@"test-card.png"];
-    cell.imageView.contentMode = UIViewContentModeScaleAspectFill;
+    cell.imageView.image = [UIImage imageNamed:[self.recipes objectAtIndex:index]];
+    cell.imageView.contentMode = UIViewContentModeScaleAspectFit;
     cell.imageView.clipsToBounds = YES;
-//    cell.textLabel.text = [NSString stringWithFormat:@"%@%@",@(index),@(index)];
     return cell;
 }
 

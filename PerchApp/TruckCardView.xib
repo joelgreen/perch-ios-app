@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="CircularStd-Bold.otf">
+            <string>CircularStd-Bold</string>
+        </array>
+        <array key="CircularStd-Book.otf">
+            <string>CircularStd-Book</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="293" height="257"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="wzC-zY-jKp">
+                    <rect key="frame" x="8" y="8" width="277" height="111"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="wzC-zY-jKp" secondAttribute="height" multiplier="200:80" id="Zdh-hN-mH5"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="652 Mateo St." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asg-Tt-edP">
+                    <rect key="frame" x="28" y="137" width="237" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="L2a-em-qI6"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="CircularStd-Bold" family="Circular Std" pointSize="19"/>
+                    <color key="textColor" red="0.15294117647058825" green="0.23921568627450979" blue="0.32156862745098036" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 hour 30 minutes remaining" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgm-3l-KT9">
+                    <rect key="frame" x="28" y="170" width="237" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="17" id="rsD-57-IFl"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="13"/>
+                    <color key="textColor" red="0.15294117647058825" green="0.23921568627450979" blue="0.32156862745098036" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full menu available with vegan and vegetarian options." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vnx-l1-rcQ">
+                    <rect key="frame" x="28" y="195" width="237" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="hAE-ms-7uL"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="13"/>
+                    <color key="textColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Vnx-l1-rcQ" firstAttribute="top" secondItem="qgm-3l-KT9" secondAttribute="bottom" constant="8" id="0tY-Kf-TVe"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="wzC-zY-jKp" secondAttribute="trailing" constant="8" id="FQ0-Da-U3d"/>
+                <constraint firstItem="asg-Tt-edP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="28" id="Nlf-9z-pBF"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Vnx-l1-rcQ" secondAttribute="trailing" constant="28" id="P7F-0Y-KVb"/>
+                <constraint firstItem="wzC-zY-jKp" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="SEE-LO-rVY"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="asg-Tt-edP" secondAttribute="trailing" constant="28" id="Sed-zb-qph"/>
+                <constraint firstItem="qgm-3l-KT9" firstAttribute="top" secondItem="asg-Tt-edP" secondAttribute="bottom" constant="8" id="T2a-Xb-U91"/>
+                <constraint firstItem="asg-Tt-edP" firstAttribute="top" secondItem="wzC-zY-jKp" secondAttribute="bottom" constant="18" id="ia7-7w-0nZ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="qgm-3l-KT9" secondAttribute="trailing" constant="28" id="kHV-XI-3YZ"/>
+                <constraint firstItem="wzC-zY-jKp" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="mTF-Vw-KHi"/>
+                <constraint firstItem="Vnx-l1-rcQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="28" id="nzc-SO-h8g"/>
+                <constraint firstItem="qgm-3l-KT9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="28" id="zTE-Dy-mld"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-101.5" y="-362.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="1.jpg" width="1500" height="986"/>
+    </resources>
+</document>
