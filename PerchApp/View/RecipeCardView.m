@@ -8,6 +8,7 @@
 
 #import "RecipeCardView.h"
 #import "ConstantHeader.h"
+#import "CartManager.h"
 
 @implementation RecipeCardView
 
@@ -70,6 +71,8 @@
     [[NSNotificationCenter defaultCenter]
      postNotificationName:@"AddedToCart"
      object:self];
+    
+    [[CartManager sharedInstance] addItem:self.recipeObject.frontImageName];
     
     [UIView animateWithDuration:0.75 delay:0 options:options animations:^{
         [self.addBasketButton setBackgroundColor:[UIColor clearColor]];

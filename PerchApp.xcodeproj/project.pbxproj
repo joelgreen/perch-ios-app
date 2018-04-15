@@ -57,6 +57,10 @@
 		11E230B520836B5000A2595F /* CheckoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11E230B420836B5000A2595F /* CheckoutViewController.m */; };
 		11E230B720836B7900A2595F /* qr.png in Resources */ = {isa = PBXBuildFile; fileRef = 11E230B620836B7900A2595F /* qr.png */; };
 		11E230B92083BA3200A2595F /* top-bar-space.png in Resources */ = {isa = PBXBuildFile; fileRef = 11E230B82083BA3200A2595F /* top-bar-space.png */; };
+		11E230BC2083BC0D00A2595F /* CartManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 11E230BB2083BC0D00A2595F /* CartManager.m */; };
+		11E230C02083BEDE00A2595F /* chicken-checkout.png in Resources */ = {isa = PBXBuildFile; fileRef = 11E230BD2083BEDE00A2595F /* chicken-checkout.png */; };
+		11E230C12083BEDE00A2595F /* halibut-checkout.png in Resources */ = {isa = PBXBuildFile; fileRef = 11E230BE2083BEDE00A2595F /* halibut-checkout.png */; };
+		11E230C22083BEDE00A2595F /* pizza-checkout.png in Resources */ = {isa = PBXBuildFile; fileRef = 11E230BF2083BEDE00A2595F /* pizza-checkout.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,6 +151,11 @@
 		11E230B420836B5000A2595F /* CheckoutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckoutViewController.m; sourceTree = "<group>"; };
 		11E230B620836B7900A2595F /* qr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = qr.png; path = ../../../../../Downloads/qr.png; sourceTree = "<group>"; };
 		11E230B82083BA3200A2595F /* top-bar-space.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "top-bar-space.png"; path = "../../../../../Downloads/top-bar-space.png"; sourceTree = "<group>"; };
+		11E230BA2083BC0D00A2595F /* CartManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CartManager.h; sourceTree = "<group>"; };
+		11E230BB2083BC0D00A2595F /* CartManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CartManager.m; sourceTree = "<group>"; };
+		11E230BD2083BEDE00A2595F /* chicken-checkout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chicken-checkout.png"; sourceTree = "<group>"; };
+		11E230BE2083BEDE00A2595F /* halibut-checkout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "halibut-checkout.png"; sourceTree = "<group>"; };
+		11E230BF2083BEDE00A2595F /* pizza-checkout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pizza-checkout.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +222,9 @@
 				116AFC2320831A3C00B144C1 /* 3.jpg */,
 				116AFC2020831A3B00B144C1 /* 4.jpg */,
 				116AFC2120831A3B00B144C1 /* 5.jpg */,
+				11E230BD2083BEDE00A2595F /* chicken-checkout.png */,
+				11E230BE2083BEDE00A2595F /* halibut-checkout.png */,
+				11E230BF2083BEDE00A2595F /* pizza-checkout.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -266,6 +278,8 @@
 				116AFBA32082E37E00B144C1 /* MealSelectionViewController.m */,
 				11E230B320836B5000A2595F /* CheckoutViewController.h */,
 				11E230B420836B5000A2595F /* CheckoutViewController.m */,
+				11E230BA2083BC0D00A2595F /* CartManager.h */,
+				11E230BB2083BC0D00A2595F /* CartManager.m */,
 				116AFC442083464D00B144C1 /* View */,
 				116AFBAC2082E90200B144C1 /* PagedScrollView */,
 				11832BF32081A5E900DD8D44 /* Networking */,
@@ -436,13 +450,16 @@
 				116AFC1820830E5E00B144C1 /* top-bar-main.png in Resources */,
 				116AFBFF2082F9C900B144C1 /* CircularStd-Book.otf in Resources */,
 				116AFC4320833DFA00B144C1 /* add-to-basket.png in Resources */,
+				11E230C02083BEDE00A2595F /* chicken-checkout.png in Resources */,
 				11832BC72081A15200DD8D44 /* LaunchScreen.storyboard in Resources */,
+				11E230C22083BEDE00A2595F /* pizza-checkout.png in Resources */,
 				11832BC42081A15200DD8D44 /* Assets.xcassets in Resources */,
 				116AFC2620831A3C00B144C1 /* 5.jpg in Resources */,
 				116AFC30208329E300B144C1 /* top-bar-main-long.png in Resources */,
 				116AFC2520831A3C00B144C1 /* 4.jpg in Resources */,
 				116AFBFA2082F4FC00B144C1 /* test-card.png in Resources */,
 				116AFC012082F9C900B144C1 /* CircularStd-Black.ttf in Resources */,
+				11E230C12083BEDE00A2595F /* halibut-checkout.png in Resources */,
 				116AFC3920833CBA00B144C1 /* tikka.png in Resources */,
 				11E230B720836B7900A2595F /* qr.png in Resources */,
 				11832BC22081A15200DD8D44 /* Main.storyboard in Resources */,
@@ -498,6 +515,7 @@
 				11832BF62081A8B800DD8D44 /* ServerReqeustManager.m in Sources */,
 				11832BCA2081A15200DD8D44 /* main.m in Sources */,
 				11832BBC2081A15200DD8D44 /* AppDelegate.m in Sources */,
+				11E230BC2083BC0D00A2595F /* CartManager.m in Sources */,
 				11832BF22081A5C800DD8D44 /* APIManager.m in Sources */,
 				116AFC1E208314A200B144C1 /* UIImage+UIImage_Extensions.m in Sources */,
 				116AFBF42082F2E800B144C1 /* FSPagerViewCell.swift in Sources */,

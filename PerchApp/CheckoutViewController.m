@@ -27,6 +27,40 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)displayQRCode
+{
+    UIImageView *qrView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"qr.png"]];
+    qrView.frame = CGRectMake(0, 0, 300, 300);
+    qrView.center = self.view.center;
+    
+    qrView.layer.shadowColor = [UIColor blackColor].CGColor;
+    qrView.layer.shadowRadius = 8;
+    qrView.layer.shadowOpacity = 0.65;
+    qrView.layer.shadowOffset = CGSizeMake(0, 0);
+
+    [self.view addSubview:qrView];
+}
+
+- (IBAction)acceptButtonPressed:(id)sender {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Confirm Payment of $26.97"
+                                                                   message:@"This will be charged to your card ending in 8765."
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * action) {
+                                                              [self displayQRCode];
+                                                          }];
+    
+    [alert addAction:defaultAction];
+    
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel
+                                                          handler:^(UIAlertAction * action) {}];
+    
+    [alert addAction:cancelAction];
+
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
 /*
 #pragma mark - Navigation
 

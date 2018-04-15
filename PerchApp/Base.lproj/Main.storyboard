@@ -16,6 +16,9 @@
         <array key="CircularStd-Book.otf">
             <string>CircularStd-Book</string>
         </array>
+        <array key="CircularStd-Medium.ttf">
+            <string>CircularStd-Medium</string>
+        </array>
     </customFonts>
     <scenes>
         <!--View Controller-->
@@ -168,20 +171,71 @@
                                     <action selector="backButtonPressed:" destination="DzB-Rt-uJ8" eventType="touchUpInside" id="HgA-dL-Qvp"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qr.png" translatesAutoresizingMaskIntoConstraints="NO" id="kc1-ZA-758">
-                                <rect key="frame" x="47.5" y="193.5" width="280" height="280"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M5H-dO-kHZ">
+                                <rect key="frame" x="0.0" y="601" width="375" height="66"/>
+                                <color key="backgroundColor" red="0.396078431372549" green="0.78823529411764703" blue="0.47843137254901957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="f7x-Pt-7OX"/>
-                                    <constraint firstAttribute="height" constant="280" id="q9Z-BT-Yeu"/>
+                                    <constraint firstAttribute="height" constant="66" id="ht5-yF-al1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CircularStd-Medium" family="Circular Std" pointSize="22"/>
+                                <state key="normal" title="Accept">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="acceptButtonPressed:" destination="DzB-Rt-uJ8" eventType="touchUpInside" id="Sjs-ZZ-uPS"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chicken-checkout.png" translatesAutoresizingMaskIntoConstraints="NO" id="Slk-8r-pDu">
+                                <rect key="frame" x="0.0" y="68" width="375" height="78"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="78" id="5XW-jQ-iqT"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$26.97" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZf-aB-ECb">
+                                <rect key="frame" x="301" y="568.5" width="58" height="25"/>
+                                <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="19"/>
+                                <color key="textColor" red="0.1529411765" green="0.23921568630000001" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chicken-checkout.png" translatesAutoresizingMaskIntoConstraints="NO" id="aIP-FS-FTL">
+                                <rect key="frame" x="0.0" y="154" width="375" height="78"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="78" id="DU6-hG-KHA"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUC-GB-rBD">
+                                <rect key="frame" x="16" y="568.5" width="42" height="24.5"/>
+                                <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="19"/>
+                                <color key="textColor" red="0.1529411765" green="0.23921568630000001" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pizza-checkout.png" translatesAutoresizingMaskIntoConstraints="NO" id="WBx-EI-9Si">
+                                <rect key="frame" x="0.0" y="240" width="375" height="78"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="78" id="BH7-ZA-qQ8"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="kc1-ZA-758" firstAttribute="centerX" secondItem="Q5A-as-GXr" secondAttribute="centerX" id="3zV-p1-Qez"/>
+                            <constraint firstItem="Slk-8r-pDu" firstAttribute="top" secondItem="rfh-GG-Tn0" secondAttribute="bottom" constant="8" id="2Tz-Sw-LTj"/>
+                            <constraint firstItem="WBx-EI-9Si" firstAttribute="trailing" secondItem="928-ot-f8D" secondAttribute="trailing" id="3Vq-hu-uCV"/>
+                            <constraint firstItem="aIP-FS-FTL" firstAttribute="leading" secondItem="928-ot-f8D" secondAttribute="leading" id="3oX-Vw-FSR"/>
+                            <constraint firstItem="M5H-dO-kHZ" firstAttribute="leading" secondItem="928-ot-f8D" secondAttribute="leading" id="7io-0h-lmz"/>
+                            <constraint firstItem="928-ot-f8D" firstAttribute="trailing" secondItem="LZf-aB-ECb" secondAttribute="trailing" constant="16" id="C5R-Om-MEK"/>
+                            <constraint firstItem="WBx-EI-9Si" firstAttribute="leading" secondItem="928-ot-f8D" secondAttribute="leading" id="DaP-os-V4Z"/>
+                            <constraint firstItem="cUC-GB-rBD" firstAttribute="leading" secondItem="928-ot-f8D" secondAttribute="leading" constant="16" id="IuT-sr-vwS"/>
+                            <constraint firstItem="Slk-8r-pDu" firstAttribute="trailing" secondItem="928-ot-f8D" secondAttribute="trailing" id="MLY-tG-rp1"/>
+                            <constraint firstItem="WBx-EI-9Si" firstAttribute="top" secondItem="aIP-FS-FTL" secondAttribute="bottom" constant="8" id="O1H-Y9-MXi"/>
+                            <constraint firstItem="aIP-FS-FTL" firstAttribute="trailing" secondItem="928-ot-f8D" secondAttribute="trailing" id="QPv-g8-3t2"/>
+                            <constraint firstItem="M5H-dO-kHZ" firstAttribute="top" secondItem="LZf-aB-ECb" secondAttribute="bottom" constant="8" id="Tbw-eK-GZt"/>
+                            <constraint firstItem="Slk-8r-pDu" firstAttribute="leading" secondItem="928-ot-f8D" secondAttribute="leading" id="V5D-Q9-oFi"/>
                             <constraint firstItem="rfh-GG-Tn0" firstAttribute="top" secondItem="928-ot-f8D" secondAttribute="top" id="Vwd-jf-9eJ"/>
-                            <constraint firstItem="kc1-ZA-758" firstAttribute="centerY" secondItem="Q5A-as-GXr" secondAttribute="centerY" id="com-oP-MSA"/>
+                            <constraint firstItem="aIP-FS-FTL" firstAttribute="top" secondItem="Slk-8r-pDu" secondAttribute="bottom" constant="8" id="i5K-k4-ZeS"/>
+                            <constraint firstItem="M5H-dO-kHZ" firstAttribute="top" secondItem="cUC-GB-rBD" secondAttribute="bottom" constant="8" id="iHQ-6x-tpy"/>
                             <constraint firstItem="rfh-GG-Tn0" firstAttribute="leading" secondItem="928-ot-f8D" secondAttribute="leading" constant="16" id="shd-ol-55V"/>
+                            <constraint firstItem="M5H-dO-kHZ" firstAttribute="bottom" secondItem="928-ot-f8D" secondAttribute="bottom" id="xjX-UV-KaG"/>
+                            <constraint firstItem="M5H-dO-kHZ" firstAttribute="trailing" secondItem="928-ot-f8D" secondAttribute="trailing" id="y63-Xs-obs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="928-ot-f8D"/>
                     </view>
@@ -192,7 +246,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="qr.png" width="300" height="300"/>
+        <image name="chicken-checkout.png" width="1124" height="204"/>
+        <image name="pizza-checkout.png" width="1123" height="204"/>
         <image name="top-bar-main-long.png" width="1125" height="707"/>
         <image name="top-bar-space.png" width="746" height="218"/>
     </resources>

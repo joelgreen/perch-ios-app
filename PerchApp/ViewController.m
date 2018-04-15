@@ -15,6 +15,7 @@
 #import "RequestParser.h"
 #import "TruckCardView.h"
 #import "ConstantHeader.h"
+#import "CartManager.h"
 
 @interface ViewController () <MKMapViewDelegate, CLLocationManagerDelegate, FSPagerViewDelegate, FSPagerViewDataSource>
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
@@ -45,11 +46,15 @@ BOOL viewDidLoadAlready = NO;
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
     [self.locationManager requestWhenInUseAuthorization];
+    
+    [[CartManager sharedInstance] resetCart];
 }
+
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    
     
     if (!viewDidLoadAlready) {
         FSPagerView *pagerView = [[FSPagerView alloc] initWithFrame:CGRectMake(0, 0, self.truckPagesContainer.frame.size.width, self.truckPagesContainer.frame.size.height)];
