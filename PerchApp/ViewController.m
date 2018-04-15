@@ -13,11 +13,13 @@
 #import "TruckObject.h"
 #import "RequestParser.h"
 
-@interface ViewController () <MKMapViewDelegate>
+@interface ViewController () <MKMapViewDelegate, CLLocationManagerDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @property (strong, nonatomic) NSMutableArray *truckPins;
 @property (strong, nonatomic) NSArray *truckObjects;
+
+@property (strong, nonatomic) CLLocationManager *locationManager;
 
 @end
 
@@ -27,7 +29,12 @@
     [super viewDidLoad];
     [self loadTruckObjects];
     self.mapView.delegate = self;
-    // Do any additional setup after loading the view, typically from a nib.
+    self.mapView.showsUserLocation = YES;
+    
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    [self.locationManager requestWhenInUseAuthorization];
+
 }
 
 - (void)loadTruckObjects

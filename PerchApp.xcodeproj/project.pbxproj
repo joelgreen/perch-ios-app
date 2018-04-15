@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		116AFBA42082E37E00B144C1 /* MealSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 116AFBA32082E37E00B144C1 /* MealSelectionViewController.m */; };
 		11832BBC2081A15200DD8D44 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11832BBB2081A15200DD8D44 /* AppDelegate.m */; };
 		11832BBF2081A15200DD8D44 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11832BBE2081A15200DD8D44 /* ViewController.m */; };
 		11832BC22081A15200DD8D44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11832BC02081A15200DD8D44 /* Main.storyboard */; };
@@ -40,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		116AFBA22082E37E00B144C1 /* MealSelectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MealSelectionViewController.h; sourceTree = "<group>"; };
+		116AFBA32082E37E00B144C1 /* MealSelectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MealSelectionViewController.m; sourceTree = "<group>"; };
 		11832BB72081A15200DD8D44 /* PerchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PerchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11832BBA2081A15200DD8D44 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		11832BBB2081A15200DD8D44 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -115,11 +118,13 @@
 		11832BB92081A15200DD8D44 /* PerchApp */ = {
 			isa = PBXGroup;
 			children = (
-				11832BBA2081A15200DD8D44 /* AppDelegate.h */,
 				11832BF82081A99200DD8D44 /* ConstantHeader.h */,
+				11832BBA2081A15200DD8D44 /* AppDelegate.h */,
 				11832BBB2081A15200DD8D44 /* AppDelegate.m */,
 				11832BBD2081A15200DD8D44 /* ViewController.h */,
 				11832BBE2081A15200DD8D44 /* ViewController.m */,
+				116AFBA22082E37E00B144C1 /* MealSelectionViewController.h */,
+				116AFBA32082E37E00B144C1 /* MealSelectionViewController.m */,
 				11832BF32081A5E900DD8D44 /* Networking */,
 				11832BEF2081A4F600DD8D44 /* Model */,
 				11832BC02081A15200DD8D44 /* Main.storyboard */,
@@ -238,6 +243,7 @@
 				TargetAttributes = {
 					11832BB62081A15200DD8D44 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 					};
 					11832BCE2081A15200DD8D44 = {
@@ -308,6 +314,7 @@
 				11832BEE2081A4F000DD8D44 /* TruckObject.m in Sources */,
 				11832BBF2081A15200DD8D44 /* ViewController.m in Sources */,
 				11832BF92081AA0400DD8D44 /* ConstantHeader.h in Sources */,
+				116AFBA42082E37E00B144C1 /* MealSelectionViewController.m in Sources */,
 				11832BF62081A8B800DD8D44 /* ServerReqeustManager.m in Sources */,
 				11832BCA2081A15200DD8D44 /* main.m in Sources */,
 				11832BBC2081A15200DD8D44 /* AppDelegate.m in Sources */,
@@ -474,12 +481,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5HBA5A75HU;
 				INFOPLIST_FILE = PerchApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.perch.PerchApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PerchApp/AR/PerchApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -488,12 +499,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5HBA5A75HU;
 				INFOPLIST_FILE = PerchApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.perch.PerchApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PerchApp/AR/PerchApp-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
