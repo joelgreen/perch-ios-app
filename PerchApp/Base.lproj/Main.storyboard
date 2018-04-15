@@ -92,30 +92,28 @@
                                     <constraint firstAttribute="height" constant="50" id="wga-5S-dYc"/>
                                 </constraints>
                             </view>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="gMx-Z6-H3i">
-                                <rect key="frame" x="168" y="552" width="39" height="37"/>
-                            </pageControl>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qqw-Wo-fsR">
-                                <rect key="frame" x="16" y="56" width="343" height="488"/>
-                                <color key="backgroundColor" red="0.79648437500000002" green="0.79648437500000002" blue="0.79648437500000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZdV-dL-es4">
+                                <rect key="frame" x="0.0" y="58" width="375" height="531"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="ZdV-dL-es4" firstAttribute="leading" secondItem="ZdN-Mr-zVq" secondAttribute="leading" id="12K-Mw-uRI"/>
                             <constraint firstItem="q5u-KV-Xjz" firstAttribute="leading" secondItem="ZdN-Mr-zVq" secondAttribute="leading" constant="22" id="1xg-Mg-1C0"/>
-                            <constraint firstItem="Qqw-Wo-fsR" firstAttribute="top" secondItem="q5u-KV-Xjz" secondAttribute="bottom" constant="6" id="9aX-aK-Mip"/>
+                            <constraint firstItem="ZdN-Mr-zVq" firstAttribute="trailing" secondItem="ZdV-dL-es4" secondAttribute="trailing" id="4F6-5p-FnW"/>
                             <constraint firstItem="MUT-5O-QsX" firstAttribute="leading" secondItem="ZdN-Mr-zVq" secondAttribute="leading" constant="22" id="Ehd-OA-j8b"/>
-                            <constraint firstItem="Qqw-Wo-fsR" firstAttribute="leading" secondItem="ZdN-Mr-zVq" secondAttribute="leading" constant="16" id="TOd-Ie-Mxs"/>
-                            <constraint firstItem="MUT-5O-QsX" firstAttribute="top" secondItem="gMx-Z6-H3i" secondAttribute="bottom" constant="8" id="dS3-RI-V6n"/>
-                            <constraint firstItem="gMx-Z6-H3i" firstAttribute="centerX" secondItem="PSE-wH-gVe" secondAttribute="centerX" id="edP-sr-Ool"/>
                             <constraint firstItem="q5u-KV-Xjz" firstAttribute="top" secondItem="ZdN-Mr-zVq" secondAttribute="top" id="iX7-YH-ugr"/>
                             <constraint firstItem="ZdN-Mr-zVq" firstAttribute="bottom" secondItem="MUT-5O-QsX" secondAttribute="bottom" constant="20" id="pye-Ji-cEs"/>
-                            <constraint firstItem="ZdN-Mr-zVq" firstAttribute="trailing" secondItem="Qqw-Wo-fsR" secondAttribute="trailing" constant="16" id="rV8-KE-crt"/>
-                            <constraint firstItem="gMx-Z6-H3i" firstAttribute="top" secondItem="Qqw-Wo-fsR" secondAttribute="bottom" constant="8" id="sGe-Jf-1oh"/>
+                            <constraint firstItem="ZdV-dL-es4" firstAttribute="top" secondItem="q5u-KV-Xjz" secondAttribute="bottom" constant="8" id="umS-oh-qQm"/>
                             <constraint firstItem="ZdN-Mr-zVq" firstAttribute="trailing" secondItem="MUT-5O-QsX" secondAttribute="trailing" constant="22" id="xhK-gd-h0u"/>
+                            <constraint firstItem="MUT-5O-QsX" firstAttribute="top" secondItem="ZdV-dL-es4" secondAttribute="bottom" constant="8" id="yCe-Qi-Idk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZdN-Mr-zVq"/>
                     </view>
+                    <connections>
+                        <outlet property="pagedViewHolder" destination="ZdV-dL-es4" id="Ryb-lI-jBS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TVB-BI-7Ss" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

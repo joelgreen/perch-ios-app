@@ -7,8 +7,12 @@
 //
 
 #import "MealSelectionViewController.h"
+#import "PerchApp-Swift.h"
 
-@interface MealSelectionViewController ()
+@interface MealSelectionViewController () <FSPagerViewDelegate, FSPagerViewDataSource>
+
+@property (weak, nonatomic) IBOutlet UIView *pagedViewHolder;
+
 
 @end
 
@@ -16,13 +20,66 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    FSPagerView *pagerView = [[FSPagerView alloc] initWithFrame:self.pagedViewHolder.frame];
+    pagerView.dataSource = self;
+    pagerView.delegate = self;
+    [pagerView registerClass:[FSPagerViewCell class] forCellWithReuseIdentifier:@"cell"];
+    [self.self.pagedViewHolder addSubview:pagerView];
+    
+    pagerView.transformer = [[FSPagerViewTransformer alloc] initWithType:FSPagerViewTransformerTypeLinear];
+
+    
+    // Create a page control
+//    FSPageControl *pageControl = [[FSPageControl alloc] initWithFrame:frame2];
+//    [self.view addSubview:pageControl];
+
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
 }
 
 - (IBAction)dismissAnyModel:(id)sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+#pragma mark - FSPagerViewDataSource
+
+- (NSInteger)numberOfItemsInPagerView:(FSPagerView *)pagerView
+{
+    return 3;
+}
+
+- (FSPagerViewCell *)pagerView:(FSPagerView *)pagerView cellForItemAtIndex:(NSInteger)index
+{
+    FSPagerViewCell *cell = [pagerView dequeueReusableCellWithReuseIdentifier:@"cell" atIndex:index];
+    cell.imageView.image = [UIImage imageNamed:@"test-card.png"];
+    cell.imageView.contentMode = UIViewContentModeScaleAspectFill;
+    cell.imageView.clipsToBounds = YES;
+//    cell.textLabel.text = [NSString stringWithFormat:@"%@%@",@(index),@(index)];
+    return cell;
+}
+
+#pragma mark - FSPagerView Delegate
+
+- (void)pagerView:(FSPagerView *)pagerView didSelectItemAtIndex:(NSInteger)index
+{
+    [pagerView deselectItemAtIndex:index animated:YES];
+    [pagerView scrollToItemAtIndex:index animated:YES];
+//    self.pageControl.currentPage = index;
+}
+
+- (void)pagerViewDidScroll:(FSPagerView *)pagerView
+{
+//    if (self.pageControl.currentPage != pagerView.currentIndex) {
+//        self.pageControl.currentPage = pagerView.currentIndex;
+//    }
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

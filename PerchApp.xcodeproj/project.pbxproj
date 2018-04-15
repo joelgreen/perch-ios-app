@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		116AFBA42082E37E00B144C1 /* MealSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 116AFBA32082E37E00B144C1 /* MealSelectionViewController.m */; };
+		116AFBF22082F2E800B144C1 /* FSPagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116AFBEB2082F2E700B144C1 /* FSPagerView.swift */; };
+		116AFBF32082F2E800B144C1 /* FSPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116AFBEC2082F2E700B144C1 /* FSPageControl.swift */; };
+		116AFBF42082F2E800B144C1 /* FSPagerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116AFBED2082F2E700B144C1 /* FSPagerViewCell.swift */; };
+		116AFBF52082F2E800B144C1 /* FSPageViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116AFBEE2082F2E800B144C1 /* FSPageViewLayout.swift */; };
+		116AFBF62082F2E800B144C1 /* FSPagerCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116AFBEF2082F2E800B144C1 /* FSPagerCollectionView.swift */; };
+		116AFBF72082F2E800B144C1 /* FSPagerViewLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116AFBF02082F2E800B144C1 /* FSPagerViewLayoutAttributes.swift */; };
+		116AFBF82082F2E800B144C1 /* FSPageViewTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116AFBF12082F2E800B144C1 /* FSPageViewTransformer.swift */; };
+		116AFBFA2082F4FC00B144C1 /* test-card.png in Resources */ = {isa = PBXBuildFile; fileRef = 116AFBF92082F4FC00B144C1 /* test-card.png */; };
 		11832BBC2081A15200DD8D44 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11832BBB2081A15200DD8D44 /* AppDelegate.m */; };
 		11832BBF2081A15200DD8D44 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11832BBE2081A15200DD8D44 /* ViewController.m */; };
 		11832BC22081A15200DD8D44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11832BC02081A15200DD8D44 /* Main.storyboard */; };
@@ -43,6 +51,15 @@
 /* Begin PBXFileReference section */
 		116AFBA22082E37E00B144C1 /* MealSelectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MealSelectionViewController.h; sourceTree = "<group>"; };
 		116AFBA32082E37E00B144C1 /* MealSelectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MealSelectionViewController.m; sourceTree = "<group>"; };
+		116AFBEA2082F2E600B144C1 /* PerchApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PerchApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		116AFBEB2082F2E700B144C1 /* FSPagerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSPagerView.swift; sourceTree = "<group>"; };
+		116AFBEC2082F2E700B144C1 /* FSPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSPageControl.swift; sourceTree = "<group>"; };
+		116AFBED2082F2E700B144C1 /* FSPagerViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSPagerViewCell.swift; sourceTree = "<group>"; };
+		116AFBEE2082F2E800B144C1 /* FSPageViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSPageViewLayout.swift; sourceTree = "<group>"; };
+		116AFBEF2082F2E800B144C1 /* FSPagerCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSPagerCollectionView.swift; sourceTree = "<group>"; };
+		116AFBF02082F2E800B144C1 /* FSPagerViewLayoutAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSPagerViewLayoutAttributes.swift; sourceTree = "<group>"; };
+		116AFBF12082F2E800B144C1 /* FSPageViewTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSPageViewTransformer.swift; sourceTree = "<group>"; };
+		116AFBF92082F4FC00B144C1 /* test-card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "test-card.png"; sourceTree = "<group>"; };
 		11832BB72081A15200DD8D44 /* PerchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PerchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11832BBA2081A15200DD8D44 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		11832BBB2081A15200DD8D44 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -95,6 +112,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		116AFBAC2082E90200B144C1 /* PagedScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				116AFBEC2082F2E700B144C1 /* FSPageControl.swift */,
+				116AFBEF2082F2E800B144C1 /* FSPagerCollectionView.swift */,
+				116AFBEB2082F2E700B144C1 /* FSPagerView.swift */,
+				116AFBED2082F2E700B144C1 /* FSPagerViewCell.swift */,
+				116AFBF02082F2E800B144C1 /* FSPagerViewLayoutAttributes.swift */,
+				116AFBEE2082F2E800B144C1 /* FSPageViewLayout.swift */,
+				116AFBF12082F2E800B144C1 /* FSPageViewTransformer.swift */,
+				116AFBEA2082F2E600B144C1 /* PerchApp-Bridging-Header.h */,
+			);
+			path = PagedScrollView;
+			sourceTree = "<group>";
+		};
 		11832BAE2081A15200DD8D44 = {
 			isa = PBXGroup;
 			children = (
@@ -125,10 +157,12 @@
 				11832BBE2081A15200DD8D44 /* ViewController.m */,
 				116AFBA22082E37E00B144C1 /* MealSelectionViewController.h */,
 				116AFBA32082E37E00B144C1 /* MealSelectionViewController.m */,
+				116AFBAC2082E90200B144C1 /* PagedScrollView */,
 				11832BF32081A5E900DD8D44 /* Networking */,
 				11832BEF2081A4F600DD8D44 /* Model */,
 				11832BC02081A15200DD8D44 /* Main.storyboard */,
 				11832BC32081A15200DD8D44 /* Assets.xcassets */,
+				116AFBF92082F4FC00B144C1 /* test-card.png */,
 				11832BC52081A15200DD8D44 /* LaunchScreen.storyboard */,
 				11832BC82081A15200DD8D44 /* Info.plist */,
 				11832BC92081A15200DD8D44 /* main.m */,
@@ -285,6 +319,7 @@
 			files = (
 				11832BC72081A15200DD8D44 /* LaunchScreen.storyboard in Resources */,
 				11832BC42081A15200DD8D44 /* Assets.xcassets in Resources */,
+				116AFBFA2082F4FC00B144C1 /* test-card.png in Resources */,
 				11832BC22081A15200DD8D44 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,15 +345,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				116AFBF32082F2E800B144C1 /* FSPageControl.swift in Sources */,
+				116AFBF52082F2E800B144C1 /* FSPageViewLayout.swift in Sources */,
 				11832BFC2081AB3300DD8D44 /* RequestParser.m in Sources */,
+				116AFBF62082F2E800B144C1 /* FSPagerCollectionView.swift in Sources */,
+				116AFBF22082F2E800B144C1 /* FSPagerView.swift in Sources */,
 				11832BEE2081A4F000DD8D44 /* TruckObject.m in Sources */,
 				11832BBF2081A15200DD8D44 /* ViewController.m in Sources */,
+				116AFBF72082F2E800B144C1 /* FSPagerViewLayoutAttributes.swift in Sources */,
 				11832BF92081AA0400DD8D44 /* ConstantHeader.h in Sources */,
 				116AFBA42082E37E00B144C1 /* MealSelectionViewController.m in Sources */,
+				116AFBF82082F2E800B144C1 /* FSPageViewTransformer.swift in Sources */,
 				11832BF62081A8B800DD8D44 /* ServerReqeustManager.m in Sources */,
 				11832BCA2081A15200DD8D44 /* main.m in Sources */,
 				11832BBC2081A15200DD8D44 /* AppDelegate.m in Sources */,
 				11832BF22081A5C800DD8D44 /* APIManager.m in Sources */,
+				116AFBF42082F2E800B144C1 /* FSPagerViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +447,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -424,6 +467,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = PerchApp;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -460,6 +504,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -472,6 +517,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = PerchApp;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -488,7 +534,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.perch.PerchApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "PerchApp/AR/PerchApp-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "PerchApp/PagedScrollView/PerchApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -506,7 +552,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.perch.PerchApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "PerchApp/AR/PerchApp-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "PerchApp/PagedScrollView/PerchApp-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -515,6 +561,7 @@
 		11832BE72081A15200DD8D44 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5HBA5A75HU;
@@ -530,6 +577,7 @@
 		11832BE82081A15200DD8D44 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5HBA5A75HU;
@@ -545,6 +593,7 @@
 		11832BEA2081A15200DD8D44 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5HBA5A75HU;
 				INFOPLIST_FILE = PerchAppUITests/Info.plist;
@@ -559,6 +608,7 @@
 		11832BEB2081A15200DD8D44 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5HBA5A75HU;
 				INFOPLIST_FILE = PerchAppUITests/Info.plist;
