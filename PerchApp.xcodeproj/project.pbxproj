@@ -217,6 +217,8 @@
 		116AFC442083464D00B144C1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				116AFC1C208314A200B144C1 /* UIImage+UIImage_Extensions.h */,
+				116AFC1D208314A200B144C1 /* UIImage+UIImage_Extensions.m */,
 				116AFC2C20831E8A00B144C1 /* TruckCardView.h */,
 				116AFC2D20831E8A00B144C1 /* TruckCardView.m */,
 				116AFC2A20831BE000B144C1 /* TruckCardView.xib */,
@@ -259,8 +261,6 @@
 				11832BBE2081A15200DD8D44 /* ViewController.m */,
 				116AFBA22082E37E00B144C1 /* MealSelectionViewController.h */,
 				116AFBA32082E37E00B144C1 /* MealSelectionViewController.m */,
-				116AFC1C208314A200B144C1 /* UIImage+UIImage_Extensions.h */,
-				116AFC1D208314A200B144C1 /* UIImage+UIImage_Extensions.m */,
 				116AFC442083464D00B144C1 /* View */,
 				116AFBAC2082E90200B144C1 /* PagedScrollView */,
 				11832BF32081A5E900DD8D44 /* Networking */,

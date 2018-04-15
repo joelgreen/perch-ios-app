@@ -59,10 +59,6 @@
     CGAffineTransform transform = CGAffineTransformMakeScale(1.2 * 0.6, 1.2);
     self.pagerView.itemSize = CGSizeApplyAffineTransform(self.pagerView.frame.size, transform);
     
-//    float widthRatio = 834 / 1557;
-//    NSLog(@"%f", pagerView.frame.size.height);
-//    self.pagerView.itemSize = CGSizeMake((int)(pagerView.frame.size.height * widthRatio), pagerView.frame.size.height);
-    
     NSMutableArray *recipes = [[NSMutableArray alloc] init];
     
     RecipeObject *rec = [[RecipeObject alloc] init];
@@ -112,6 +108,12 @@
         
         [cell addSubview:card];
         card.frame = cell.contentView.bounds;
+        
+        card.layer.shadowColor = [UIColor blackColor].CGColor;
+        card.layer.shadowRadius = 8;
+        card.layer.shadowOpacity = 0.65;
+        card.layer.shadowOffset = CGSizeMake(0, 0);
+
         
         [self.recipeViews setObject:card atIndexedSubscript:index];
         
